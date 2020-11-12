@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&family=Roboto&family=Source+Sans+Pro&display=swap');
+/* Resetting properties for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+/* HomePage styling */
+.homePage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #292b37;
+}
+.homePage > h1{
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    filter: drop-shadow(0px 0px 6px black);
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 20px;
+}
+/* Main Section */
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    height: 77%;
+}
+/* styling for all three boxes */
+.box{
+    font-family: 'Fjalla One', sans-serif;
+    height: 100%;
+    margin: 0px 8px;
+}
+/* styling for left and right oxes */
+.sideText{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: transparent;
+    word-spacing: 4px;
+    font-size: 18px;
+    width: 26%;
+    overflow-y: auto;
+}
+.sideText > h1{
+    margin: 0 0 16px 10px;
+    font-weight: 100;
+}
+.sideText > h3{
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.sideText::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sideText::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgb(102 173 161); 
+}
+.left{
+    font-size: 13px;
+}
+/* styling for the central box through which user will chat */
+.center{
+    background-color: #66ada1;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 45%;
+}
+.center > form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 45px;
+}
+.center > form > h3{
+    text-align: center;
+    font-size: 55px;
+}
+.center > form > input{
+    border: 2px solid transparent;
+    outline: none;
+    background-color: #ddd;
+    border-radius: 3px;
+    margin: 5px 0;
+    font-size: 20px;
+    padding: 5px;
+}
+.center > form > input::placeholder{
+    font-family: 'Fjalla One', sans-serif;
+}
+.center > form > button{
+    color: white;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: #292b37;
+    border-radius: 11px;
+    font-size: 24px;
+    padding: 3px;
+    cursor: pointer;
+    margin: 14px 0;
+    transition: .1s;
+}
+.center > form > button:hover{
+    background-color: #292b37ce;
+}
+.joinedChat{
+    width: 98%;
+    height: 100%;
+}
+.joinedChat > h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 2px 0 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6%;
+}
+.joinedChat > h2 > span{
+    margin: 0 5px 0 0;
+    border: 2px solid black;
+    padding: 0 4px;
+    border-radius: 6px;
+    font-size: 20px;
+    display: inline-table;
+    align-items: center;
+    cursor: pointer;
+    background-color: #84bb9d;
+    transition: .2s;
+}
+.joinedChat > h2 > span:hover{
+    color: white;
+    background-color: #000;
+}
+.joinedChat > .chatArea{
+    background-color: white;
+    padding: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 3px;
+    width: 100%;
+    height: 82%;
+    overflow-y: auto;
+}
+.chatArea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chatArea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/* styling for messages */
+.msg:nth-child(1){
+    margin-top: 0px;
+}
+.msg{
+    margin: 4px 0;
+    display: flex;
+}
+.msg > div{
+    padding: 2px;
+    background-color: #b7b7a4;
+    border-radius: 3px;
+    width: 222px;
+}
+.msg > div > h4{
+    font-size: 14px;
+    text-decoration: underline;
+}
+.msg > div > h2{
+    font-size: 17px;
+}
+/* styling for the message which would appear on the right side as user sent this message */
+.right{
+    justify-content: flex-end;
+}
+/* styling for chat alert such as user joined/left  the chat */
+.chatAlert{
+    display: flex;
+    justify-content: center;
+    background-color: #66ad7975;
+    border-radius: 31px;
+    color: #2d4032;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.userLeftAlert{
+    background-color: #f7b1a3;
+    color: #8f230c;
+}
+.chatAlert > strong{
+    margin: 0 3px;
+}
+/* Styling of the form through which user will send message */
+.sendMsg{
+    display: flex;
+    height: 8%;
+    margin: 6px 0;
+}
+.sendMsg > input{
+    font-family: 'Roboto', sans-serif;
+    background: #eee;
+    outline: none;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 22px;
+    border: none;
+    width: 100%;
+}
+.sendMsg > input::placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.sendMsg > button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.sendMsg > button > img{
+    height: 35px;
+}
+/* Alerts or warning such as this user already exists */
+.alert{
+    position: fixed;
+    width: 100vw;
+    padding: 4px 12px;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    top: 0;
+    background-color: #23584f;
+    align-items: center;
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: 900;
+    box-shadow: 1px 1px 24px black;
+    transform: translateY(-50px);
+    transition: .2s;
+}
+.alert > img{
+    height: 30px;
+    filter: invert(1);
+    cursor: pointer;
+}
+/* This alert will show up with the following css class once the alert happens */
+.showAlert{
+    transform: translateY(0);
+}
+@media screen and (max-width:673px){
+    .homePage{
+        height: auto;
+    }
+    .homePage > h1 {
+        font-size: 22px;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .box{
+        width: auto;
+        height: auto;
+    }
+    .center{
+        height: 76vh;
+    }
+    .sideText:nth-child(1){
+        display: none;
+    }
+    .sideText{
+        width: auto;
+        font-size: 17px;
+    }
+    .sideText > h1{
+        margin: 13px 0 16px 0px;
+    }
+    .homePage > h1{
+        padding-top: 10px;
+    }
+    .alert{
+        font-size: 19px;
+    }
+}
